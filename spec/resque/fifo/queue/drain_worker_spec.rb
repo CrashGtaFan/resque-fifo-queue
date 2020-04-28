@@ -1,5 +1,5 @@
 require "spec_helper"
-require "pry-byebug"
+require "pry-debugger"
 
 RSpec.describe Resque::Plugins::Fifo::Queue::DrainWorker do
   let(:manager) { Resque::Plugins::Fifo::Queue::Manager.new }

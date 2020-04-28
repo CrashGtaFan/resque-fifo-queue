@@ -168,9 +168,10 @@ module Resque
           end
 
           def dump_queues
-            query_available_queues.collect do |queue|
+            queues_array = query_available_queues.collect do |queue|
               [queue, Resque.peek(queue,0,0)]
-            end.to_h
+            end
+            Hash[*queues_array.flatten(1)]
           end
 
           def pretty_dump_queues

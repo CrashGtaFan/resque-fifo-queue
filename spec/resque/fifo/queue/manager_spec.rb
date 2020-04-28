@@ -1,5 +1,5 @@
 require "spec_helper"
-require "pry-byebug"
+require "pry-debugger"
 
 class TestJob
   @queue = :file_serve
